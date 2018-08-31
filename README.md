@@ -1,2 +1,2 @@
 # Burger
-![alt tag](/public/assets/img/burger_app.png)
+<img src="/public/assets/img/burger_app.png">
