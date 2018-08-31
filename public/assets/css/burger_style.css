@@ -1,0 +1,56 @@
+body{
+    background-image: url(/assets/img/brgerbg.jpg); 
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    /* background-color: blue; */
+}
+.Available{
+    text-align: center;
+}
+.addPlan{
+    border-radius: 10%;
+    margin-top:5%;
+    background-color: yellow;
+    color: brown;
+    font-family: fantasy;
+}
+h1{
+    color: yellow;
+    font-family: fantasy;
+    margin-top: 10%;
+    margin-bottom: 2%;
+}
+.Detail{
+    color: yellow;
+    font-family: fantasy;
+}
+p{
+    color: tomato;
+}
+.devouredBurger{
+    text-align: center;
+}
+.devoured{
+    border-radius: 10%;
+    margin-top:5%; 
+    background-color: yellow;
+    color: brown;
+    font-family: fantasy;
+}
+h2{
+    color: yellow;
+    font-family: fantasy;
+}
+.spaceToAdd{
+    background-color: yellow;
+    color: brown;
+    font-family: fantasy;
+}
+.addBurger{
+    background-color: yellow;
+    color: brown;
+    font-family: fantasy;
+}
+

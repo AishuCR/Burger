@@ -1,15 +1,44 @@
-<h1>Eat-da-Burger </h1>
-<img src="../public/assets/img/burger.jpg">
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{/mo}}
-    <li>
-        <p>
-            {{this.id}}. {{this.plan}}
-            <button data-planid="{{this.id}}" class="addPlan">Add Burger</button>
-        </p>
-    </li>
-    {{/unless}}
-    {{/each}}
-</ul>
+<h1><center>Eat-da-Burger</center> </h1>
+<div class="container">
+    {{!--
+    <div>
+        <img src="/assets/img/burger.jpg">
+    </div> --}}
+    <div class="row">
+        <div class="col-6" class="heading_row">
+            <h2><center>Burgers available to Eat</center></h2>
+            {{#each burgers}}
+             {{#unless this.devoured}}
+            <div class="Available">
+                <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+                    <button class="addPlan">{{this.burger_name}}</button>
+                </form>
+            </div>
+            {{/unless}} {{/each}}
+        </div>
+        <div class="col-6">
+            <h2><center>Burgers that have been Devored!</center></h2>
+            {{#each burgers}} 
+            {{#if this.devoured}}
+            <div class="devouredBurger">
+                <div>
+                    <button class="devoured">{{this.burger_name}}</button>
+                </div>
+            </div>
+            {{/if}} 
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+
+<h2><center>Add a Burger</center></h2>
+<div class="row">
+    <div class="col-12">
+        <form action="/burgers" method="POST">
+            <h6><center class="Detail">Enter the name of the burger you want to order and click on the submit button</center></h6>
+            <center><input type="text" name="burger_name" class="spaceToAdd">
+            <button type="submit" class="addBurger">Submit Order</button></center>
+        </form>
+    </div>
+</div>
